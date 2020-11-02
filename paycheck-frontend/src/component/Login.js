@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './Login.css';
+import Dashboard from './Dashboard';
 
 class componentName extends Component {
     
     render () {
+        let imgName = "https://banner2.kisspng.com/20180320/stq/kisspng-payroll-computer-icons-human-resources-tax-busines-tax-vector-drawing-5ab0ee6108da66.4067552415215448010363.jpg"
         return (
             
-            <form action="/action_page.php" method="post">
+            <form >
             <div class="imgcontainer">
-                <img src="https://th.bing.com/th/id/OIP.Nuy39yqcMREaqhbbevS-YgHaHa?pid=Api&rs=1" alt="Avatar" class="avatar"/>
+                <img src={imgName} alt="Avatar" class="avatar"/>
+               <div> Welcome to Paychek</div>
             </div>
 
             <div class="container">
@@ -18,7 +21,7 @@ class componentName extends Component {
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required/>
                     
-                <button type="submit">Login</button>
+                <button onClick={()=>{<Dashboard/>}}>Login</button>
                 <label>
                 <input type="checkbox" checked="checked" name="remember"/> Remember me
                 </label>
